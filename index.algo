@@ -1,0 +1,18 @@
+ALGORITHM chekpoint 
+VAR
+    x : STRING;
+    a,b,c: INTEGER := 0;
+BEGIN
+    REPEAT
+        Write("une phrase")
+         Read(x)
+         IF (x = "number") THEN
+         a = a + 1;
+         END IF 
+
+         IF (x = "Vowels") THEN 
+         b = b + 1;
+         END IF 
+
+    UNTIL (x = "#")
+END
