@@ -6,13 +6,17 @@ BEGIN
     REPEAT
         Write("une phrase")
          Read(x)
-         IF (x = "number") THEN
-         a = a + 1;
+         a := a + 1;
+         IF (x = " " AND a <> 1) THEN
+          c = c + 1;
          END IF 
 
-         IF (x = "Vowels") THEN 
+         IF (x = "a" OR x = "e" OR x = "i" OR x = "u" OR x = "y") THEN 
          b = b + 1;
          END IF 
 
-    UNTIL (x = "#")
+    UNTIL (x = ".")
+    Write("nbre de char", a)
+    Write("nbre de word", c)
+    Write("nbre de v", b)
 END
