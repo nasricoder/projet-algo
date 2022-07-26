@@ -1,0 +1,29 @@
+ALGORITHM Communhash
+VAR
+    A,B : ARRAY_OF INTEGER[];
+    sum : INTEGER := 0;
+    c : HASH_TABLE<INTEGER,INTEGER>
+BEGIN
+    A := [3,1,7,9];
+    B := [2,4,1,9,3]
+
+    FOR i FROM 1 TO A.length STEP 1  DO
+        C.insert(A[i],1)
+    END_FOR
+
+    FOR i FROM 1 TO B.length STEP 1 DO
+        IF (c.lookup(B[i]) = TRUE) THEN
+        c.insert(B[i],2)
+        ELSE 
+        c.insert(B[i],1)
+        END_IF
+
+    END_FOR
+
+    FOR i FROM 1 TO A.length STEP 1 DO
+        IF (c.get(A[i]) = 2) THEN
+            sum = sum + A[i]*2
+        END_IF
+    END_FOR
+
+END

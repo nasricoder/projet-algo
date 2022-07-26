@@ -1,0 +1,22 @@
+ALGORITHM disntinctsimple
+VAR
+    A,B : ARRAY_OF INTEGER[];
+    sum : INTEGER := 0;
+    verif : BOOLEAN := false;
+
+BEGIN
+    A := [3,1,7,9];
+    B := [2,4,1,9,3];
+
+    FOR i FROM 1 TO A.length STEP 1  DO
+        verif := FALSE;
+        FOR j FROM 1 TO B.length STEP 1 DO
+        IF (A[i] = B[j]) THEN 
+             verif := TRUE;
+        END_IF
+
+        IF (verif = FALSE) THEN 
+           sum := sum A[i]
+           END_IF
+    END_FOR
+END
